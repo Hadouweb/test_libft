@@ -1,12 +1,13 @@
 cmake_minimum_required(VERSION 3.5)
 project(test_libft)
 
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_FLAGS "-Wall -g -v -std=c++11")
 
 include_directories(unit_test_clion_init)
 include_directories(libft libft/includes)
 
 add_subdirectory(unit_test_clion_init)
+add_subdirectory(libft)
 
 set(SOURCE_FILES
         libft/includes/libft.h
@@ -98,7 +99,8 @@ set(SOURCE_FILES
         libft/srcs/tab/ft_tablen.c
         libft/srcs/get_next_line.c
         libft/srcs/str/ft_nblen.c
-        libft/srcs/str/ft_atoi_base.c)
+        libft/srcs/str/ft_atoi_base.c
+        libft/libft.a)
 
 
-add_library(libft_lib SHARED libft/libft.a)
+#add_library(libft_lib SHARED libft/libft.a)
